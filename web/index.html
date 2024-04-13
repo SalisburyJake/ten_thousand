@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" manifest="cache.appcache">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ten Thousand</title>
+        <link rel="stylesheet" href="ccs/styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <h1>Ten Thousand</h1>
+        <button id="newGameButton" onclick="startNewGame()">New Game</button>
+        <br>
+        <br>
+        <table id="10000Table"> 
+            <tr id = player_name_row></tr>  
+            <tr id = player_score_row></tr> 
+            <tr id = player_score_list_row></tr>  
+        </table>
+
+        <script src="js/script.js"></script>
+        <script src="js/newgamewindow.js"></script>
+        <script src="js/addscorewindow.js"></script>
+        <script src="js/gameoverwindow.js"></script>
+        <!--New Game Popup Window-->
+        <div id="newGameWindow" class="newGameWindow"></div>
+        <!--Add Score Popup Window-->
+        <div id="addScoreWindow" class="addScoreWindow"></div>
+        <!--Game Over Popup Window-->
+        <div id="gameOverWindow" class="gameOverWindow"></div>
+    </body>
+</html>

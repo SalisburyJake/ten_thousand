@@ -1,0 +1,24 @@
+<div class="addScoreWindow-content">
+    <span class="close" onclick="closeAddScoreWindow()">&times;</span>
+    <h2 id="addScoreTitle"></h2>
+    <form id="nameForm">
+        <input type="text" id="addScoreDisplay" readonly>
+    </form>
+    </br>
+    </br>
+    <div class="number-pad">
+        <button onclick="appendToScoreDisplay('1')">1</button>
+        <button onclick="appendToScoreDisplay('2')">2</button>
+        <button onclick="appendToScoreDisplay('3')">3</button>
+        <button onclick="appendToScoreDisplay('4')">4</button>
+        <button onclick="appendToScoreDisplay('5')">5</button>
+        <button onclick="appendToScoreDisplay('6')">6</button>
+        <button onclick="appendToScoreDisplay('7')">7</button>
+        <button onclick="appendToScoreDisplay('8')">8</button>
+        <button onclick="appendToScoreDisplay('9')">9</button>
+        <button onclick="appendToScoreDisplay('0')">0</button>
+        <button onclick="clearScoreDisplay()">Clear</button>
+    </div>
+</br>
+    <button type="submit"onclick="addScore(selectedPlayer, $('#addScoreDisplay').val())">Submit</button>
+</div>
