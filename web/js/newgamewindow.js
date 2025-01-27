@@ -19,13 +19,14 @@ function closeNewGameWindow(){
 function addNameInput() {
     console.log("addNameInput");
     const newLine = $('</br>');
-    const newInput = $('<input type="text" id="nameInput" placeholder="Enter a name">');
-    //Remove the "Remove Entry Button"
-    $("#removeEntryButton").remove();
+    const newInput = $('<input type="text" id="nameInput" placeholder="Enter a name">'); 
+
+    //Remove the "Remove Player Button"
+    $("#removePlayerButton").remove();
     //Add name input
     $('#name_form_data').append(newInput);
-    //Add the "Remove Entry Button"
-    $('#name_form_data').append('<button type="button" id="removeEntryButton" onclick="removeLastInput()">Remove Entry</button>');
+    //Add the "Remove Player Button"
+    $('#name_form_data').append('<button type="button" id="removePlayerButton" onclick="removeLastInput()">Remove Player</button>');
     //Add New Line
     $('#name_form_data').append(newLine);
 }
@@ -52,6 +53,9 @@ function startGame() {
     
     //Close Window
     closeNewGameWindow();
+    
+    //Show Help Description
+    $("#helpDescription").show();
 };
 
 function getListOfNamesFromNewGame(){
@@ -85,12 +89,13 @@ function fillInNewGameWindow(){
             $('#name_form_data').append('</br>');
         }
         //Finally, add in button to remove the last form entry
-        $("#name_form_data input:last").after('<button type="button" id="removeEntryButton" onclick="removeLastInput()">Remove Entry</button>');
+        $("#name_form_data input:last").after('<button type="button" id="removePlayerButton" onclick="removeLastInput()">Remove Player</button>');
     }
     //Else add a Single input to since this is a brand new game
     else{
         //Add a single blank input
         $('#name_form_data').append('<input type="text" id="nameInputFirst" placeholder="Enter a name">');
+        $('#name_form_data').append('</br>');
     }
     
 }
@@ -101,12 +106,12 @@ function removeLastInput(){
     //Remove last line break
     $("#name_form_data br:last").remove();
     //Remove the "Remove Entry Button"
-    $("#removeEntryButton").remove();
+    $("#removePlayerButton").remove();
 
     //Add the "Remove Entry Button" to the last name entry
     //ONLY IF there is more than 1 entry left
     var inputCount = $("#name_form_data input").length;
     if(inputCount > 1){
-        $("#name_form_data input:last").after('<button type="button" id="removeEntryButton" onclick="removeLastInput()">Remove Entry</button>');
+        $("#name_form_data input:last").after('<button type="button" id="removePlayerButton" onclick="removeLastInput()">Remove Player</button>');
     }
 }

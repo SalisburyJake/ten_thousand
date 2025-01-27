@@ -1,0 +1,54 @@
+/* addScoreWindow container */
+.addScoreWindow {
+    font-family: 'Roboto', sans-serif; /* Change to desired font */
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* addScoreWindow content */
+  .addScoreWindow-content {
+    font-family: 'Roboto', sans-serif; /* Change to desired font */
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: max-content; /* Could be more or less, depending on screen size */
+    padding-left: 50px; /* Add extra padding to make it wider */
+    padding-right: 50px; /* Add extra padding to make it wider */
+    text-align: center; 
+    margin-top: 20px;
+  }
+
+.center-container {
+    font-family: 'Roboto', sans-serif; /* Change to desired font */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .number-pad {
+    font-family: 'Roboto', sans-serif; /* Change to desired font */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 200px;
+    text-align: center; 
+  }
+  .number-pad button {
+    font-family: 'Roboto', sans-serif; /* Change to desired font */
+    padding: 10px;
+    min-width: 70px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+  }
